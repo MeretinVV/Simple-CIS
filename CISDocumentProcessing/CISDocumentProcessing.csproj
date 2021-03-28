@@ -1,0 +1,237 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2FCAABDC-B781-4930-A1AB-D87F8765C9FB}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>CISDocumentProcessing</RootNamespace>
+    <AssemblyName>CISDocumentProcessing</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=8.0.22.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\Aggregator.cs" />
+    <Compile Include="Classes\Customer.cs" />
+    <Compile Include="Classes\Employee.cs" />
+    <Compile Include="Classes\EmployeePayment.cs" />
+    <Compile Include="Classes\Project.cs" />
+    <Compile Include="Controls\EmployeeFilter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\EmployeeFilter.Designer.cs">
+      <DependentUpon>EmployeeFilter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\EmployeeListItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\EmployeeListItem.Designer.cs">
+      <DependentUpon>EmployeeListItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\EmployeePaymentFilter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\EmployeePaymentFilter.Designer.cs">
+      <DependentUpon>EmployeePaymentFilter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\EmployeePaymentListItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\EmployeePaymentListItem.Designer.cs">
+      <DependentUpon>EmployeePaymentListItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ProjectFilter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ProjectFilter.Designer.cs">
+      <DependentUpon>ProjectFilter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ProjectListItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ProjectListItem.Designer.cs">
+      <DependentUpon>ProjectListItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AddProjectParticipantForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AddProjectParticipantForm.Designer.cs">
+      <DependentUpon>AddProjectParticipantForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EditEmployeeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EditEmployeeForm.Designer.cs">
+      <DependentUpon>EditEmployeeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EmployeeAnalysisForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EmployeeAnalysisForm.Designer.cs">
+      <DependentUpon>EmployeeAnalysisForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\NewCustomerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\NewCustomerForm.Designer.cs">
+      <DependentUpon>NewCustomerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\NewEmployeeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\NewEmployeeForm.Designer.cs">
+      <DependentUpon>NewEmployeeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EditPaymentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EditPaymentForm.Designer.cs">
+      <DependentUpon>EditPaymentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\NewPaymentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\NewPaymentForm.Designer.cs">
+      <DependentUpon>NewPaymentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EditProjectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EditProjectForm.Designer.cs">
+      <DependentUpon>EditProjectForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\NewProjectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\NewProjectForm.Designer.cs">
+      <DependentUpon>NewProjectForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ProjectAnalysisForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ProjectAnalysisForm.Designer.cs">
+      <DependentUpon>ProjectAnalysisForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Controls\EmployeeFilter.resx">
+      <DependentUpon>EmployeeFilter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\EmployeeListItem.resx">
+      <DependentUpon>EmployeeListItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\EmployeePaymentFilter.resx">
+      <DependentUpon>EmployeePaymentFilter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\EmployeePaymentListItem.resx">
+      <DependentUpon>EmployeePaymentListItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ProjectFilter.resx">
+      <DependentUpon>ProjectFilter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ProjectListItem.resx">
+      <DependentUpon>ProjectListItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AddProjectParticipantForm.resx">
+      <DependentUpon>AddProjectParticipantForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EditEmployeeForm.resx">
+      <DependentUpon>EditEmployeeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EmployeeAnalysisForm.resx">
+      <DependentUpon>EmployeeAnalysisForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\NewCustomerForm.resx">
+      <DependentUpon>NewCustomerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\NewEmployeeForm.resx">
+      <DependentUpon>NewEmployeeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EditPaymentForm.resx">
+      <DependentUpon>EditPaymentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\NewPaymentForm.resx">
+      <DependentUpon>NewPaymentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EditProjectForm.resx">
+      <DependentUpon>EditProjectForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\NewProjectForm.resx">
+      <DependentUpon>NewProjectForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ProjectAnalysisForm.resx">
+      <DependentUpon>ProjectAnalysisForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\no_photo.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
